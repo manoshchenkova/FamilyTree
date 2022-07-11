@@ -20,6 +20,9 @@ public class FamilyTreeApp {
         Node node3 = new Node(person3);
         node3.setMother(node1);
         node3.setFather(node2);
+        Node node4 = new Node(person4);
+        node4.setFather(node2);
+        node4.setMother(node1);
 
 //        System.out.println(person1.getFullName());
         UI.printFamilyTree(node1, " ");
@@ -28,10 +31,16 @@ public class FamilyTreeApp {
 
         SearchRelation findChildren = new SearchChildren();
         List<Node> children = findChildren.find(node1);
-        System.out.println("Child " + children);
+        System.out.println("Child --->" + children);
 
-        Research newResearch = new ResearchImpl();
+//        Research newResearch = new ResearchImpl();
+//        SearchRelation newRelation = new SearchChildren();
+//        List<Node> childrenList = newResearch.searchByRelation(node1, newRelation);
+//        System.out.println("Child ---> " + childrenList);
 
+        SearchRelation findParent1 = new SearchParents();
+        List<Node> parents = findParent1.find(node3);
+        System.out.println("Parent --->" + parents);
 
     }
 
