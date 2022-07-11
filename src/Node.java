@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Node {
+public class  Node {
     private Person person;
     private Node father;
     private Node mother;
@@ -56,5 +56,12 @@ public class Node {
             }
         }
 
+    }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "person=" + person +
+                '}';
     }
 }

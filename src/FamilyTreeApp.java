@@ -1,3 +1,5 @@
+import java.util.List;
+
 public class FamilyTreeApp {
     public static void main(String[] args) {
 
@@ -21,6 +23,16 @@ public class FamilyTreeApp {
 
 //        System.out.println(person1.getFullName());
         UI.printFamilyTree(node1, " ");
+
+//        System.out.println("Children " + node1.getChildren());
+
+        SearchRelation findChildren = new SearchChildren();
+        List<Node> children = findChildren.find(node1);
+        System.out.println("Child " + children);
+
+        Research newResearch = new ResearchImpl();
+
+
     }
 
 

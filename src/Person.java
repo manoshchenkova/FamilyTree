@@ -69,4 +69,15 @@ public class Person {
         String fullName = String.format("%s %s %s", firstName, lastName, dateOfBirth);
         return fullName;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "lastName='" + lastName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", sex=" + sex +
+                ", id=" + id +
+                '}';
+    }
 }
