@@ -3,17 +3,19 @@
 * */
 
 
+import java.time.LocalDate;
+
 public class Person {
 
     enum Sex {MALE, FEMALE, UNKNOWN}
 
     private String lastName = "Неизвестно";
     private String firstName = "Неизвестно";
-    private String dateOfBirth = "Неизвестно";
+    private LocalDate dateOfBirth;
     private Sex sex = Sex.UNKNOWN;
     private int id;
 
-    public Person(String lastName, String firstName, String dateOfBirth, Sex sex, int id) {
+    public Person(String lastName, String firstName, LocalDate dateOfBirth, Sex sex, int id) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.dateOfBirth = dateOfBirth;
@@ -40,11 +42,11 @@ public class Person {
         this.firstName = firstName;
     }
 
-    public String getDateOfBirth() {
+    public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

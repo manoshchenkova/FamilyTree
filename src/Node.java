@@ -1,7 +1,9 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class  Node {
+public class Node implements Comparable<Node> {
+    
     private Person person;
     private Node father;
     private Node mother;
@@ -9,6 +11,16 @@ public class  Node {
 
     public Node(Person person) {
         this.person = person;
+    }
+
+    @Override
+    public int compareTo(Node o) {
+
+        LocalDate dateOfBirth = this.getPerson().getDateOfBirth();
+
+        LocalDate dateOfBirth1 = o.getPerson().getDateOfBirth();
+
+        return dateOfBirth.compareTo(dateOfBirth1);
     }
 
     public Node getFather() {
